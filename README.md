@@ -14,8 +14,8 @@ The purpose of building a CI/CD pipeline is to automate steps in software delive
 - Docker Hub
 - Tomcat
 
-|               Tools                  |
+|         |   **Tools**   |            |
 |---------|---------------|------------|
-| Jenkins | t2.medium     | Yes        |
-| Tomcat  | t2.micro      | Yes        |
-| Ansible | t2.micro      | Yes        |
+| Jenkins |     Maven     |   Ansible  |
+|  Docker |  Docker Hub   |   Tomcat   |
+|   Git   |    Github     |            |
