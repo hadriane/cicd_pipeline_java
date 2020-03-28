@@ -14,6 +14,10 @@ The tools we would be using to build a CI/CD pipeline
 |  Docker |  Docker Hub   |   Tomcat   |
 |   Git   |    Github     |   AWS EC2  |
 
+
+## Infrastructure Design
+![Infrastructure Design](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/CICD-Infrastructure_Design.png)
+
 ### Overview
 
 Prepare the underlining infrastructure
