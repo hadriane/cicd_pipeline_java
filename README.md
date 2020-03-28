@@ -17,6 +17,7 @@ The tools we would be using to build a CI/CD pipeline
 |   Git   |    Github     |   AWS EC2  |
 
 
+
 ## Infrastructure Design
 ![Infrastructure Design](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/Infrastructure_Design.png)
 
