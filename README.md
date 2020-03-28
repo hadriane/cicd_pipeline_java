@@ -16,7 +16,7 @@ The tools we would be using to build a CI/CD pipeline
 
 
 ## Infrastructure Design
-![Infrastructure Design](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/CICD-Infrastructure_Design.png)
+<img align="left" src="https://github.com/hadriane/cicd_pipeline_java/blob/master/images/CICD-Infrastructure_Design.png">
 
 ### Overview
 
