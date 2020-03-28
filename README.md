@@ -22,9 +22,7 @@ The tools we would be using to build a CI/CD pipeline
 ![Infrastructure Design](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/Infrastructure_Design.png)
 
 
-### Overview
-
-Prepare the underlining infrastructure
+### Overview of Steps
 
 1. AWS
     1. Launch AWS EC2 instances
