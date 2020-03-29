@@ -62,7 +62,8 @@ User On Each Host
     [<username>@jenkins root]$
     ```
 2. Copy SSH keys over to necessary servers
-    1. Allow SSH password login for Ansible host and Docker host
+    1. Allow SSH password login
+        > ***Note**: Do the following on Ansible host and Docker host only*
         1. Open /etc/ssh/sshd_config file
         2. Comment out "PasswordAuthentication no" and uncomment "PasswordAuthentication yes" then save the file
         ```
@@ -73,9 +74,9 @@ User On Each Host
         ```
         3. Restart sshd service
         ```
-        [root@docker ~]# service sshd restart
+        [root@jenkins ~]# service sshd restart
         Redirecting to /bin/systemctl restart sshd.service
-        [root@docker ~]#
+        [root@jenkins ~]#
         ``` 
-        
+    2. On An
         
