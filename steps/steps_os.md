@@ -34,7 +34,21 @@ User On Each Host
     [root@jenkins ~]# useradd <username>
     [root@jenkins ~]# passwd <username>
     ```
-3. Generating SSH keys for users
+3. Add uses to necessary groups
+    1. **FILL IN**
+4. Grant sudo access to ansibleadm user on Ansible host
+    1. Open sudoers file
+    ```
+    [centos@ansible ~]$ sudo su -
+    [root@ansible ~]# visudo
+    ```
+    2. Add "ansibleadm      ALL=(ALL)       NOPASSWD: ALL" to the bottom of the file and save it
+    ```
+    ## Read drop-in files from /etc/sudoers.d (the # here does not mean a comment)
+    #includedir /etc/sudoers.d
+    ansibleadm      ALL=(ALL)       NOPASSWD: ALL
+    ```
+5. Generating SSH keys for users
     > ***Note**: For jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
     1. Generate SSH key
     ```
@@ -42,7 +56,7 @@ User On Each Host
     [centos@jenkins ~]$ su <username>
     [<username>@jenkins root]$ ssh-keygen
     Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/gituser/.ssh/id_rsa):
+    Enter file in which to save the key (/home/<username>/.ssh/id_rsa):
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again:
     [<username>@jenkins root]$
