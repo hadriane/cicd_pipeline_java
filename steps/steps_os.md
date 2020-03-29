@@ -89,3 +89,19 @@ User On Each Host
         [centos@ansible ~]$ sudo su -
         [root@ansible ~]# ssh-copy-id ansibleadm@<private_ip_of_docker_server>
         ```
+    3. Disallow SSH password login
+        > ***Note**: Do the following on Jenkins host and Docker host only*
+        1. Open /etc/ssh/sshd_config file
+        2. Comment out "PasswordAuthentication yes" and uncomment "PasswordAuthentication no" then save the file
+        ```
+        # To disable tunneled clear text passwords, change to no here!
+        #PasswordAuthentication yes
+        #PermitEmptyPasswords no
+        PasswordAuthentication no
+        ```
+        3. Restart sshd service
+        ```
+        [root@jenkins ~]# service sshd restart
+        Redirecting to /bin/systemctl restart sshd.service
+        [root@jenkins ~]#
+        ``` 
