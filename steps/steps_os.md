@@ -23,6 +23,6 @@ Users On Each Host
         ClientAliveCountMax 3
         ```
     3. Reboot the machine
-        ```
-        [root@ip-12-34-56-78 ~]# reboot -h now
-        ```
+    ```
+    [root@ip-12-34-56-78 ~]# reboot -h now
+    ```
