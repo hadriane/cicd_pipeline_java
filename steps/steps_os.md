@@ -35,8 +35,7 @@ User On Each Host
     [root@jenkins ~]# passwd <username>
     ```
 3. Generating SSH keys for users
-> ***Note**: For jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
-    
+    > ***Note**: For jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
     1. Generate SSH key
     ```
     [centos@jenkins ~]$ sudo su -
