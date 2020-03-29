@@ -70,5 +70,7 @@ Instance Types
         3. Search the EC2 instance in **Instance**
         4. Select a **Private IP address**
         5. Click **Associate**
+        6. Repeat the above steps to associate the balance 2 Elastic IP addresses with the balance 2 EC2 instances
+        
         
     
