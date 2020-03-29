@@ -1,5 +1,6 @@
 ### 1 - AWS
 
+
 Instance Types
 
 | Server  | Instance Type | Elastic IP | EBS Volume Size | Security Group Name / Tag | Open Port(s) |
@@ -7,6 +8,7 @@ Instance Types
 | Jenkins | t2.micro      |     Yes    |       8 GB      |       CICD - Jenkins      |    22,8080   |
 | Ansible | t2.micro      |     Yes    |       8 GB      |       CICD - Ansible      |      22      |
 | Docker  | t2.micro      |     Yes    |       8 GB      |       CICD - Docker       |    22,8080   |
+
 
 1. Create Security Groups
     1. Login to your AWS console
@@ -18,11 +20,6 @@ Instance Types
         3. Open ports in **Outbound rules** as described in the "Open Port(s)" column in the table above
         3. Click **Create security group**
 
-2. Allocate Elastic IP addresses
-    1. Navigate back to **EC2 Dashboard*
-    2. Allocate 3 Elastic IP addresses
-        1. Click **Elastic IPs** then click **Allocate Elastic IP address**
-        2. Select **Amazon's pool of IPv4 addresses** then click **Allocate**
 
 3. Launch AWS EC2 instances
     1. Navigate back to **EC2 Dashboard*
@@ -43,7 +40,7 @@ Instance Types
     9. Click **Next: Add Tags** then **Add Tag**
     10. Modify the values for **Add Tags** as below
         1. **Key**: "Name" 
-        2. **Name**: as described in the "Security Group Name / Tag" column in the table above 
+        2. **Value**: as described in the "Security Group Name / Tag" column in the table above 
     10. Click **Next: Configure Security Group**
     11. Select the Security Group **Name** matching the server you are creating now
     12. Click **Review and Launch**
@@ -52,4 +49,26 @@ Instance Types
     15. Give it a **Key pair name**
     16. Click **Download Key Pair** asn save the file in a secure place
     17. Click **Launch Instances**
-    18. Repeat the above steps for the other 2 servers
+    18. Repeat the above steps to create the other 2 servers
+
+
+3. Allocate each AWS EC2 instance a pulblic ip address
+    1. Navigate back to **EC2 Dashboard*
+    2. Allocate an Elastic IP addresses
+        1. Click **Elastic IPs** then click **Allocate Elastic IP address**
+        2. Select **Amazon's pool of IPv4 addresses** then click **Allocate**
+    3. Tag the Elastic IP address
+        1. Tick the newly tagged Elastic IP address
+        2. Click **Tags** then click **Manage tags**
+        3. Modify the values for **Manage tags** as below
+            1. **Key**: "Name" 
+            2. **Value**: as described in the "Security Group Name / Tag" column in the table above
+            3. Click **Save**
+    3. Assign the allocated Elastic IP address to an EC2 instance
+        1. Tick the newly tagged Elastic IP address
+        2. Click **Actions** then click **Associate Elastic IP address**
+        3. Search the EC2 instance in **Instance**
+        4. Select a **Private IP address**
+        5. Click **Associate**
+        
+    
