@@ -14,6 +14,7 @@ Instance Types
     1. Login to your AWS console
     2. Navigate to **EC2 Dashboard**
     3. Click on **Security Groups**
+    
     > ***NOTE**: Repeat **Steps iv - vii** to create the other 2 Security Groups*
     4. Click **Create security group**
     5. Give the **Security group name** as described in the "Security Group Name / Tag" column in the table above 
