@@ -61,7 +61,7 @@ User On Each Host
     Enter same passphrase again:
     [<username>@jenkins root]$
     ```
-2. Copy SSH keys over to necessary servers
+6. Copy SSH keys over to necessary servers
     1. Allow SSH password login
         > ***Note**: Do the following on Jenkins host and Docker host only*
         1. Open /etc/ssh/sshd_config file
@@ -105,3 +105,32 @@ User On Each Host
         Redirecting to /bin/systemctl restart sshd.service
         [root@jenkins ~]#
         ``` 
+7. Enable yum repositories
+    > ***Note**: Do the below step only on Jenkins host
+    1. Enable Jenkins repoistory
+    ```
+    [centos@jenkins ~]$ sudo su -
+    [root@jenkins ~]# curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+    [jenkins]
+    name=Jenkins-stable
+    baseurl=http://pkg.jenkins.io/redhat-stable
+    gpgcheck=1
+    [root@jenkins ~]# sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+    ```
+    > ***Note**: Do the below step only on Ansible and Docker host
+    2. Enable EPEL repository
+    ```
+    [centos@ansible ~]$ sudo su -
+    [root@ansible ~]# yum --enablerepo=extras install -y epel-release
+    ```
+8. Install packages
+    > ***Note**: Do the below step on all hosts
+    1. install wget
+    ```
+    [root@jenkins ~]# yum install -y wget
+    ```
+    > ***Note**: Do steps only on Jenkins hosts
+    2. Install Java 1.8
+    ```
+    [root@jenkins ~]# yum install -y java-1.8*
+    ```
