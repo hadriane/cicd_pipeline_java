@@ -1,4 +1,4 @@
-### 2 - OS
+### OS
 
 User On Each Host
 
