@@ -9,13 +9,13 @@
     ```
 2. Copy jenkinsadm SSH key from Jenkins server to Github
     1. Log into Github
-    2. Click the drop-down arrow next to your Avatar on the top right
-    3. Click Settings
-    4. Click SSH and GPG keys
-    5. Click New SSH key
-    6. Give it a Title EX: jenkinsadm
-    7. Paste the SSH public key copied earlier into the Key box
-    8. Click Add SSH key
+    2. Click the **drop-down arrow** next to your Avatar on the top right
+    3. Click **Settings**
+    4. Click **SSH and GPG keys**
+    5. Click **New SSH key**
+    6. Give it a **Title** *Ex*: jenkinsadm
+    7. Paste the SSH public key copied earlier into the **Key** box
+    8. Click **Add SSH key**
 3. Fork "helloworld" repository from my Github account to your account
     1. Go to https://github.com/hadriane/helloworld
     2. Click **Fork** on the top right
