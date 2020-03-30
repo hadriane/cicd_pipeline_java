@@ -124,19 +124,24 @@ User On Each Host
     [root@ansible ~]# yum --enablerepo=extras install -y epel-release
     ```
 8. Install packages
-    > ***Note**: Do steps only on Jenkins hosts*
+    > ***Note**: Do steps **i - vi** only on Jenkins hosts*
     1. Install Java 1.8
     ```
     [root@jenkins ~]# yum install -y java-1.8*
-    ```    
-    2. Find Java executable and take the last entry
+    ```
+    2, Download Maven
+    ```
+    [root@jenkins ~]# cd /tmp
+    [root@jenkins tmp]# curl https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz --output apache-maven-3.6.3-bin.tar.gz
+    ```
+    3. Find Java executable and take the last entry
     ```
     [root@jenkins ~]# find /usr/lib/jvm/java-1.8* | head -n 3
     /usr/lib/jvm/java-1.8.0
     /usr/lib/jvm/java-1.8.0-openjdk
     /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
     ```
-    3. Set environment variables
+    4. Set environment variables
         1. Open /root/.bash_profile and modify it to like below then save the file
         ```
         # User specific environment and startup programs
@@ -154,9 +159,15 @@ User On Each Host
         [root@jenkins ~]# echo $M2_HOME
         /opt/maven
         ```
-    4. Install Jenkins
+    5. Install Jenkins
     ```
     [root@jenkins ~]# yum install -y jenkins
+    ```
+    6. Install MAven
+    ```
+    [root@jenkins tmp]#  tar -xvzf apache-maven-3.6.3-bin.tar.gz
+    [root@jenkins tmp]# mv apache-maven-3.6.3 /opt/maven
+    [root@jenkins tmp]#  rm -f apache-maven-3.6.3-bin.tar.gz
     ```
     > ***Note**: Do the below step on all hosts*
     4. install wget
