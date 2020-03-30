@@ -1,5 +1,6 @@
 ### Docker
 
+> ***NOTE**: Do **Steps 1 - 2** on Docker Hub*
 1. Create a Access Tokens on Docker Hub
     1. Login to [Docker Hub](https://hub.docker.com/)
     2. Next to you Docker Hub username on the top right, click on the **drop-down arrow**
@@ -13,7 +14,7 @@
     2. Give it a Name and Description *Ex*: cicd_tomcat
     3. Set the Visibility to Private
     4. Click Create
-> ***NOTE**: Do **Steps 3 - 7** on Docker host*
+> ***NOTE**: Do **Steps 3 - 8** on Docker host*
 3. Connect Docker host to Docker Hub
     1. SSH to Docker host
     2. Become root, run the below command and enter the **Access Token** at the **Password** prompt
