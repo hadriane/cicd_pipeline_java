@@ -134,3 +134,28 @@ User On Each Host
     ```
     [root@jenkins ~]# yum install -y java-1.8*
     ```
+    3. Find Java executable and take the last entry
+    ```
+    [root@jenkins ~]# find /usr/lib/jvm/java-1.8* | head -n 3
+    /usr/lib/jvm/java-1.8.0
+    /usr/lib/jvm/java-1.8.0-openjdk
+    /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
+    ```
+    4. Set Java environment variable
+        1. Open /root/.bash_profile and modify it to like below then save the file
+        ```
+        # User specific environment and startup programs
+        JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
+        M2_HOME=/opt/maven
+        M2=/opt/maven/bin
+        PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+        ```
+        2. Logoff, login then check the enviroment variable
+        ```
+        [root@jenkins ~]# echo $JAVA_HOME
+        /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
+        [root@jenkins ~]# echo $M2
+        /opt/maven/bin
+        [root@jenkins ~]# echo $M2_HOME
+        /opt/maven
+        ```
