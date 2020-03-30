@@ -13,16 +13,16 @@ Instance Types
 1. Create Security Groups
     1. Login to your AWS console
     2. Navigate to **EC2 Dashboard**
-    3. Click on **Security Groups** 
-    4. Create 3 **Security Groups**
-        1. Click **Create security group**
-        2. Give the **Security group name** as described in the "Security Group Name / Tag" column in the table above 
-        3. Open ports in **Outbound rules** as described in the "Open Port(s)" column in the table above
-        3. Click **Create security group**
-
+    3. Click on **Security Groups**
+    > ***NOTE**: Repeat **Steps ii - xviii** to create the other 2 Security Groups
+    4. Click **Create security group**
+    5. Give the **Security group name** as described in the "Security Group Name / Tag" column in the table above 
+    6. Open ports in **Outbound rules** as described in the "Open Port(s)" column in the table above
+    7. Click **Create security group**
 
 3. Launch AWS EC2 instances
-    1. Navigate back to **EC2 Dashboard*
+    1. Navigate back to **EC2 Dashboard**
+    > ***NOTE**: Repeat **Steps ii - xviii** to create the other 2 servers
     2. Click on **Instances** >> **Launch Instance**
     3. Search "Centos" then click on **AWS Marketplace**
     4. Click **Select** on the top most results then click **Continue**
@@ -49,11 +49,10 @@ Instance Types
     15. Give it a **Key pair name**
     16. Click **Download Key Pair** asn save the file in a secure place
     17. Click **Launch Instances**
-    18. Repeat the above steps to create the other 2 servers
-
 
 3. Allocate each AWS EC2 instance a pulblic ip address
     1. Navigate back to **EC2 Dashboard*
+    > ***NOTE**: Repeat **Steps ii - iv** to associate the balance 2 Elastic IP addresses with the balance 2 EC2 instances
     2. Allocate an Elastic IP addresses
         1. Click **Elastic IPs** then click **Allocate Elastic IP address**
         2. Select **Amazon's pool of IPv4 addresses** then click **Allocate**
@@ -64,13 +63,12 @@ Instance Types
             1. **Key**: "Name" 
             2. **Value**: as described in the "Security Group Name / Tag" column in the table above
             3. Click **Save**
-    3. Assign the allocated Elastic IP address to an EC2 instance
+    4. Assign the allocated Elastic IP address to an EC2 instance
         1. Tick the newly tagged Elastic IP address
         2. Click **Actions** then click **Associate Elastic IP address**
         3. Search the EC2 instance in **Instance**
         4. Select a **Private IP address**
         5. Click **Associate**
-        6. Repeat the above steps to associate the balance 2 Elastic IP addresses with the balance 2 EC2 instances
         
         
     
