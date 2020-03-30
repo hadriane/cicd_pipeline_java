@@ -119,7 +119,7 @@ User On Each Host
     [root@ansible ~]# yum --enablerepo=extras install -y epel-release
     ```
 8. Install packages
-    > ***NOTE**: Do **Steps i - vi** only on Jenkins hosts*
+    > ***NOTE**: Do **Steps i - viii** only on Jenkins hosts*
     1. Install Java 1.8
     ```
     [root@jenkins ~]# yum install -y java-1.8*
