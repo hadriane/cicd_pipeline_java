@@ -33,8 +33,12 @@ User On Each Host
     [root@jenkins ~]# useradd <username>
     [root@jenkins ~]# passwd <username>
     ```
+> ***NOTE**: Do **Step 3** on Docker host
 3. Add uses to necessary groups
-    1. **FILL IN**
+    ```
+    [centos@docker ~]$ sudo su -
+    [root@docker ~]# usermod -aG dockerroot ansibleadm
+    ```
 > ***NOTE**: Repeat **Step 2** on Ansible host and Docker Host*
 4. Grant sudo access to ansibleadm user
     1. Open sudoers file
