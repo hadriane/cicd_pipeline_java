@@ -49,7 +49,7 @@ User On Each Host
     ansibleadm      ALL=(ALL)       NOPASSWD: ALL
     ```
 > ***NOTE**: In **Step 5**, for user jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
-5. Generating SSH keys for users
+5. Generate SSH keys for users
     1. Generate SSH key
     ```
     [centos@jenkins ~]$ sudo su -
