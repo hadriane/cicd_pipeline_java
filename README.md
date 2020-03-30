@@ -58,7 +58,7 @@ The tools we would be using to build a CI/CD pipeline
 **[Ansible](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/ansible.md)**
 1. Create a diretory for Ansible
 2. Create an Ansible skeleton role
-3. Move into Tomcat directory create a hosts directory
+3. Create a hosts directory
 4. Create a hosts file in hosts directory with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/hosts)
 5. Create an Ansible Playbook named docker-container.yml with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/docker-container.yml)
 6. Give ansible folder and its contents the appropriate owners
