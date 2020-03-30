@@ -24,12 +24,12 @@ The tools we would be using to build a CI/CD pipeline
 
 ### Overview of Steps
 
-**[AWS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_aws.md)**
+**[AWS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/aws.md)**
 1. Create Security Groups
 2. Launch AWS EC2 instances
 3. Allocate each AWS EC2 instance a pulblic ip address
 
-**[OS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_os.md)**
+**[OS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/os.md)**
 1. Change server hostname and SSH timeout for all servers
 2. Create users
 3. Add uses to necessary groups
@@ -39,12 +39,12 @@ The tools we would be using to build a CI/CD pipeline
 7. Enable yum repositories
 8. Install packages
 
-**[Github](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_github.md)**
+**[Github](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/github.md)**
 1. Get jenkinsadm SSH key from Jenkins server to Github
 2. Copy jenkinsadm SSH key from Jenkins server to Github
 3. Fork "helloworld" repo
 
-**[Docker](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_docker.md)**
+**[Docker](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/docker.md)**
 1. Create a Access Tokens
 2. Create a repository
 3. Connect Docker host to Docker Hub
@@ -55,10 +55,13 @@ The tools we would be using to build a CI/CD pipeline
 8. Push created Docker image to Docker Hub
 9. Create a directory with appropriate permissions to store Java artifacts
  
-**[Ansible](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_ansible.md)**
+**[Ansible](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/ansible.md)**
 1. Create a diretory for Ansible
 2. Create an Ansible skeleton role
 3. Move into Tomcat directory create a hosts directory
 4. Create a hosts file in hosts directory with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/hosts)
 5. Create an Ansible Playbook named docker-container.yml with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/docker-container.yml)
 6. Give ansible folder and its contents the appropriate owners
+
+**[Jenkins](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/jenkins.md)**
+1. 
