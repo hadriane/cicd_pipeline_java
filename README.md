@@ -18,7 +18,7 @@ The tools we would be using to build a CI/CD pipeline
 
 
 
-## Infrastructure Design
+### Infrastructure Design
 ![Infrastructure Design](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/Infrastructure_Design.png)
 
 
@@ -44,7 +44,7 @@ The tools we would be using to build a CI/CD pipeline
 2. Copy jenkinsadm SSH key from Jenkins server to Github
 3. Fork "helloworld" repo
 
-**[Docker Hub]()**
+**[Docker Hub](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_dockerhub.md)**
 1. Create a Access Tokens
 2. Create a repository
 3. Clone Docker image
