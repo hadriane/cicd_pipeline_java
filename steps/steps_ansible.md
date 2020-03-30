@@ -1,6 +1,6 @@
 ### Ansible
 
-> ***NOTE**: All **Step** below are done on Ansible host
+> ***NOTE**: All **Steps** below are done on Ansible host
 1. Create a diretory for Ansible
 ```
 [centos@ansible ~]$ sudo su -
