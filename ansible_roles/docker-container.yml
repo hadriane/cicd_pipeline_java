@@ -1,0 +1,23 @@
+---
+
+- hosts: tomcatservers
+  gather_facts: true
+  become: true
+
+  tasks:
+
+    - name: pull Docker image V1 from cicd-tomcat repo
+      docker_image:
+        name: <your_docker_hub_username>/cicd-tomcat:v1
+
+    - name: recreate tomcat container
+      docker_container:
+        name: tomcat-custom-v1
+        image: docker.io/<your_docker_hub_username>/cicd-tomcat:v1
+        state: started
+        recreate: yes
+        ports:
+          - "8080:8080"
+
+    - name: Copy artifact to container
+      shell: docker cp /tmp/java_artifacts/tomcat-v1/webapp/target/webapp.war tomcat-custom-v1:/usr/local/tomcat/webapps
