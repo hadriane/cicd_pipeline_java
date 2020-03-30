@@ -14,7 +14,7 @@ Instance Types
     1. Login to your AWS console
     2. Navigate to **EC2 Dashboard**
     3. Click on **Security Groups**
-    > ***NOTE**: Repeat **Steps iv - vii** to create the other 2 Security Groups
+    > ***NOTE**: Repeat **Steps iv - vii** to create the other 2 Security Groups*
     4. Click **Create security group**
     5. Give the **Security group name** as described in the "Security Group Name / Tag" column in the table above 
     6. Open ports in **Outbound rules** as described in the "Open Port(s)" column in the table above
@@ -22,7 +22,7 @@ Instance Types
 
 3. Launch AWS EC2 instances
     1. Navigate back to **EC2 Dashboard**
-    > ***NOTE**: Repeat **Steps ii - xviii** to create the other 2 servers
+    > ***NOTE**: Repeat **Steps ii - xviii** to create the other 2 hosts*
     2. Click on **Instances** >> **Launch Instance**
     3. Search "Centos" then click on **AWS Marketplace**
     4. Click **Select** on the top most results then click **Continue**
@@ -52,7 +52,7 @@ Instance Types
 
 3. Allocate each AWS EC2 instance a pulblic ip address
     1. Navigate back to **EC2 Dashboard*
-    > ***NOTE**: Repeat **Steps ii - iv** to associate the balance 2 Elastic IP addresses with the balance 2 EC2 instances
+    > ***NOTE**: Repeat **Steps ii - iv** to associate the balance 2 Elastic IP addresses with the balance 2 EC2 instances*
     2. Allocate an Elastic IP addresses
         1. Click **Elastic IPs** then click **Allocate Elastic IP address**
         2. Select **Amazon's pool of IPv4 addresses** then click **Allocate**
