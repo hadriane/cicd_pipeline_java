@@ -8,7 +8,7 @@ User On Each Host
 | Ansible           |     No     |     Yes    |
 | Docker            |     Yes    |     Yes    |
 
-
+> ***NOTE**: Repeat the **Step 1** for all hosts*
 1. Change server hostname and SSH timeout for all servers
     1. Change server hostname
         1. Use the below command to change the hostname of the server
@@ -26,9 +26,8 @@ User On Each Host
     ```
     [root@ip-12-34-56-78 ~]# reboot -h now
     ```
-    4. Repeat the steps for all servers
+> ***NOTE**: Do **Step 2** on all hosts according to **User On Each Host** table above*
 2. Create users
-    1. Create user according to *User On Each Host* table above
     ```
     [centos@jenkins ~]$ sudo su -
     [root@jenkins ~]# useradd <username>
@@ -36,7 +35,8 @@ User On Each Host
     ```
 3. Add uses to necessary groups
     1. **FILL IN**
-4. Grant sudo access to ansibleadm user on Ansible host
+> ***NOTE**: Do **Step 2** on Ansible host and Docker Host*
+4. Grant sudo access to ansibleadm user
     1. Open sudoers file
     ```
     [centos@ansible ~]$ sudo su -
@@ -48,8 +48,8 @@ User On Each Host
     #includedir /etc/sudoers.d
     ansibleadm      ALL=(ALL)       NOPASSWD: ALL
     ```
+> ***Note**: In **Step 5**, for user jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
 5. Generating SSH keys for users
-    > ***Note**: For jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
     1. Generate SSH key
     ```
     [centos@jenkins ~]$ sudo su -
@@ -61,9 +61,9 @@ User On Each Host
     Enter same passphrase again:
     [<username>@jenkins root]$
     ```
+> ***Note**: In **Step 6** copy jenkinsadm user ssh key from Jenkins host to Ansible host & Docker host and copy ansibleadm user ssh key from Ansible host to Docker host 
 6. Copy SSH keys over to necessary servers
     1. Allow SSH password login
-        > ***Note**: Do the following on Jenkins host and Docker host only*
         1. Open /etc/ssh/sshd_config file
         2. Comment out "PasswordAuthentication no" and uncomment "PasswordAuthentication yes" then save the file
         ```
@@ -78,19 +78,14 @@ User On Each Host
         Redirecting to /bin/systemctl restart sshd.service
         [root@jenkins ~]#
         ``` 
-    2. On Ansible host
-        1. Copy ansibleadm SSH key to Jenkins host
-        ```
-        [centos@ansible ~]$ sudo su -
-        [root@ansible ~]# ssh-copy-id ansibleadm@<private_ip_of_jenkins_server>
-        ```
-        2. Copy ansibleadm SSH key to Docker host
-        ```
-        [centos@ansible ~]$ sudo su -
-        [root@ansible ~]# ssh-copy-id ansibleadm@<private_ip_of_docker_server>
-        ```
+    > ***Note**: In **Step ii** copy jenkinsadm user ssh key from Jenkins host to Ansible host & Docker host and copy ansibleadm user ssh key from Ansible host to Docker host 
+    2. Copy SSH keys to appropriate host(s)
+    ```
+    [centos@ansible ~]$ sudo su -
+    [root@ansible ~]# ssh-copy-id ansibleadm@<private_ip_of_jenkins_server>
+    ```
+    > ***Note**: Do **Step iii** on Ansible host and Docker Host*
     3. Disallow SSH password login
-        > ***Note**: Do the following on Jenkins host and Docker host only*
         1. Open /etc/ssh/sshd_config file
         2. Comment out "PasswordAuthentication yes" and uncomment "PasswordAuthentication no" then save the file
         ```
@@ -106,7 +101,7 @@ User On Each Host
         [root@jenkins ~]#
         ``` 
 7. Enable yum repositories
-    > ***Note**: Do the below step only on Jenkins host*
+    > ***Note**: Do **Step i** only on Jenkins host*
     1. Enable Jenkins repoistory
     ```
     [centos@jenkins ~]$ sudo su -
@@ -117,14 +112,14 @@ User On Each Host
     gpgcheck=1
     [root@jenkins ~]# sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
     ```
-    > ***Note**: Do the below step only on Ansible and Docker host*
+    > ***Note**: Do **Step ii** only on Jenkins host*
     2. Enable EPEL repository
     ```
     [centos@ansible ~]$ sudo su -
     [root@ansible ~]# yum --enablerepo=extras install -y epel-release
     ```
 8. Install packages
-    > ***Note**: Do steps **i - vi** only on Jenkins hosts*
+    > ***Note**: Do **Steps i - vi** only on Jenkins hosts*
     1. Install Java 1.8
     ```
     [root@jenkins ~]# yum install -y java-1.8*
@@ -180,23 +175,23 @@ User On Each Host
     Executing /sbin/chkconfig jenkins on
     [root@jenkins ~]# systemctl start jenkins
     ```
-    > ***Note**: Do steps **x - x** on Ansible host and Docker host*
+    > ***Note**: Do step **ix** on Ansible host and Docker host*
     9. Install Python Pip
     ```
     [root@ansible ~]# yum install -y python-pip
     [root@ansible ~]# pip install --upgrade pip
     ```
-     > ***Note**: Do steps **x - x** on Docker host*
+     > ***Note**: Do steps **x** on Docker host*
     10. Install docker-py
     ```
     [root@ansible ~]# pip install docker-py
     ```
-    > ***Note**: Do steps **x - x** step on Ansible hosts*
+    > ***Note**: Do steps **xi** step on Ansible hosts*
     11. Install Ansible
     ```
     [root@ansible ~]# pip install ansible
     ```
-    > ***Note**: Do steps **x - x** step on Docker hosts*
+    > ***Note**: Do steps **xii** step on Docker hosts*
     12. Install Docker
     ```
     [root@docker ~]# yum install -y docker
