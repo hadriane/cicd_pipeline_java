@@ -26,7 +26,7 @@ User On Each Host
     ```
     [root@ip-12-34-56-78 ~]# reboot -h now
     ```
-> ***NOTE**: Do **Step 2** on all hosts according to **User On Each Host** table above*
+> ***NOTE**: Repeat **Step 2** on all hosts according to **User On Each Host** table above*
 2. Create users
     ```
     [centos@jenkins ~]$ sudo su -
@@ -35,7 +35,7 @@ User On Each Host
     ```
 3. Add uses to necessary groups
     1. **FILL IN**
-> ***NOTE**: Do **Step 2** on Ansible host and Docker Host*
+> ***NOTE**: Repeat **Step 2** on Ansible host and Docker Host*
 4. Grant sudo access to ansibleadm user
     1. Open sudoers file
     ```
@@ -48,7 +48,7 @@ User On Each Host
     #includedir /etc/sudoers.d
     ansibleadm      ALL=(ALL)       NOPASSWD: ALL
     ```
-> ***Note**: In **Step 5**, for user jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
+> ***NOTE**: In **Step 5**, for user jenkinsadm, generate SSH key on Jenkins host and for ansibleadm, generate SSH keys on Ansible host*
 5. Generating SSH keys for users
     1. Generate SSH key
     ```
@@ -61,7 +61,7 @@ User On Each Host
     Enter same passphrase again:
     [<username>@jenkins root]$
     ```
-> ***Note**: In **Step 6** copy jenkinsadm user ssh key from Jenkins host to Ansible host & Docker host and copy ansibleadm user ssh key from Ansible host to Docker host 
+> ***NOTE**: In **Step 6** copy jenkinsadm user ssh key from Jenkins host to Ansible host & Docker host and copy ansibleadm user ssh key from Ansible host to Docker host 
 6. Copy SSH keys over to necessary servers
     1. Allow SSH password login
         1. Open /etc/ssh/sshd_config file
@@ -78,13 +78,13 @@ User On Each Host
         Redirecting to /bin/systemctl restart sshd.service
         [root@jenkins ~]#
         ``` 
-    > ***Note**: In **Step ii** copy jenkinsadm user ssh key from Jenkins host to Ansible host & Docker host and copy ansibleadm user ssh key from Ansible host to Docker host 
+    > ***NOTE**: In **Step ii** copy jenkinsadm user ssh key from Jenkins host to Ansible host & Docker host and copy ansibleadm user ssh key from Ansible host to Docker host 
     2. Copy SSH keys to appropriate host(s)
     ```
     [centos@ansible ~]$ sudo su -
     [root@ansible ~]# ssh-copy-id ansibleadm@<private_ip_of_jenkins_server>
     ```
-    > ***Note**: Do **Step iii** on Ansible host and Docker Host*
+    > ***NOTE**: Repeat **Step iii** on Ansible host and Docker Host*
     3. Disallow SSH password login
         1. Open /etc/ssh/sshd_config file
         2. Comment out "PasswordAuthentication yes" and uncomment "PasswordAuthentication no" then save the file
@@ -101,7 +101,7 @@ User On Each Host
         [root@jenkins ~]#
         ``` 
 7. Enable yum repositories
-    > ***Note**: Do **Step i** only on Jenkins host*
+    > ***NOTE**: Do **Step i** only on Jenkins host*
     1. Enable Jenkins repoistory
     ```
     [centos@jenkins ~]$ sudo su -
@@ -112,14 +112,14 @@ User On Each Host
     gpgcheck=1
     [root@jenkins ~]# sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
     ```
-    > ***Note**: Do **Step ii** only on Jenkins host*
+    > ***NOTE**: Do **Step ii** only on Jenkins host*
     2. Enable EPEL repository
     ```
     [centos@ansible ~]$ sudo su -
     [root@ansible ~]# yum --enablerepo=extras install -y epel-release
     ```
 8. Install packages
-    > ***Note**: Do **Steps i - vi** only on Jenkins hosts*
+    > ***NOTE**: Do **Steps i - vi** only on Jenkins hosts*
     1. Install Java 1.8
     ```
     [root@jenkins ~]# yum install -y java-1.8*
@@ -175,23 +175,23 @@ User On Each Host
     Executing /sbin/chkconfig jenkins on
     [root@jenkins ~]# systemctl start jenkins
     ```
-    > ***Note**: Do step **ix** on Ansible host and Docker host*
+    > ***NOTE**: Repeat step **ix** on Ansible host and Docker host*
     9. Install Python Pip
     ```
     [root@ansible ~]# yum install -y python-pip
     [root@ansible ~]# pip install --upgrade pip
     ```
-     > ***Note**: Do steps **x** on Docker host*
+     > ***NOTE**: Do steps **x** on Docker host*
     10. Install docker-py
     ```
     [root@ansible ~]# pip install docker-py
     ```
-    > ***Note**: Do steps **xi** step on Ansible hosts*
+    > ***NOTE**: Do steps **xi** step on Ansible hosts*
     11. Install Ansible
     ```
     [root@ansible ~]# pip install ansible
     ```
-    > ***Note**: Do steps **xii** step on Docker hosts*
+    > ***NOTE**: Do steps **xii** step on Docker hosts*
     12. Install Docker
     ```
     [root@docker ~]# yum install -y docker
