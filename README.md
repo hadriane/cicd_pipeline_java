@@ -25,9 +25,9 @@ The tools we would be using to build a CI/CD pipeline
 ### Overview of Steps
 
 **[AWS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_aws.md)**
-    1. Create Security Groups
-    2. Launch AWS EC2 instances
-    3. Allocate each AWS EC2 instance a pulblic ip address
+1. Create Security Groups
+2. Launch AWS EC2 instances
+3. Allocate each AWS EC2 instance a pulblic ip address
 2. [OS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_os.md)
     1. Change server hostname and SSH timeout for all servers
     2. Create users
