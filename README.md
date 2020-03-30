@@ -64,4 +64,5 @@ The tools we would be using to build a CI/CD pipeline
 6. Give ansible folder and its contents the appropriate owners
 
 **[Jenkins](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/jenkins.md)**
-1. 
+1. Login to jenkins
+2. 2. Configure Maven plugin
