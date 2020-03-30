@@ -129,7 +129,7 @@ User On Each Host
     ```
     [root@jenkins ~]# yum install -y java-1.8*
     ```
-    2, Download Maven
+    2. Download Maven
     ```
     [root@jenkins ~]# cd /tmp
     [root@jenkins tmp]# curl https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz --output apache-maven-3.6.3-bin.tar.gz
@@ -163,14 +163,46 @@ User On Each Host
     ```
     [root@jenkins ~]# yum install -y jenkins
     ```
-    6. Install MAven
+    6. Install Maven
     ```
     [root@jenkins tmp]#  tar -xvzf apache-maven-3.6.3-bin.tar.gz
     [root@jenkins tmp]# mv apache-maven-3.6.3 /opt/maven
     [root@jenkins tmp]#  rm -f apache-maven-3.6.3-bin.tar.gz
     ```
-    > ***Note**: Do the below step on all hosts*
-    4. install wget
+    7. Install Git
     ```
-    [root@jenkins ~]# yum install -y wget
+    [root@jenkins tmp]# yum install -y git
+    ```
+    8. Enable Jenkins
+    ```
+    [root@jenkins ~]# systemctl enable jenkins
+    jenkins.service is not a native service, redirecting to /sbin/chkconfig.
+    Executing /sbin/chkconfig jenkins on
+    [root@jenkins ~]# systemctl start jenkins
+    ```
+    > ***Note**: Do steps **x - x** on Ansible host and Docker host*
+    9. Install Python Pip
+    ```
+    [root@ansible ~]# yum install -y python-pip
+    [root@ansible ~]# pip install --upgrade pip
+    ```
+     > ***Note**: Do steps **x - x** on Docker host*
+    10. Install docker-py
+    ```
+    [root@ansible ~]# pip install docker-py
+    ```
+    > ***Note**: Do steps **x - x** step on Ansible hosts*
+    11. Install Ansible
+    ```
+    [root@ansible ~]# pip install ansible
+    ```
+    > ***Note**: Do steps **x - x** step on Docker hosts*
+    12. Install Docker
+    ```
+    [root@docker ~]# yum install -y docker
+    ```
+    13. Enable and start Docker
+    ```
+    [root@docker ~]# systemctl enable docker
+    [root@docker ~]# systemctl start docker
     ```
