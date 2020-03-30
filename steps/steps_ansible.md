@@ -1,5 +1,6 @@
 ### Ansible
 
+> ***NOTE**: All **Step** below are done on Ansible host
 1. Create a diretory for Ansible
 ```
 [centos@ansible ~]$ sudo su -
@@ -15,9 +16,9 @@
 [root@ansible tomcat]# mkdir -p docker/hosts
 ```
 4. Create a hosts file in hosts directory with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/hosts)
-> ***NOTE**: Change the **<private_ip_of_docker_server>** accordingly*
+> ***NOTE**: For **Step 5** change the **<private_ip_of_docker_server>** accordingly*
 5. Create an Ansible Playbook named docker-container.yml with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/docker-container.yml)
-> ***NOTE**: Change the **<your_docker_hub_username>** accordingly*
+> ***NOTE**: For **Step 6** change the **<your_docker_hub_username>** accordingly*
 6. Give ansible folder and its contents the appropriate owners
 ```
 [root@ansible ~]# chown -R ansibleadm:ansibleadm /etc/ansible
