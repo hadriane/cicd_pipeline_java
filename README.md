@@ -28,15 +28,16 @@ The tools we would be using to build a CI/CD pipeline
 1. Create Security Groups
 2. Launch AWS EC2 instances
 3. Allocate each AWS EC2 instance a pulblic ip address
-2. [OS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_os.md)
-    1. Change server hostname and SSH timeout for all servers
-    2. Create users
-    3. Add uses to necessary groups
-    4. Grant sudo access to ansibleadm user
-    5. Genetate SSH keys for users
-    6. Copy SSH keys over to necessary servers
-    7. Enable yum repositories
-    8. Install packages
+
+**[OS](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_os.md)**
+1. Change server hostname and SSH timeout for all servers
+2. Create users
+3. Add uses to necessary groups
+4. Grant sudo access to ansibleadm user
+5. Genetate SSH keys for users
+6. Copy SSH keys over to necessary servers
+7. Enable yum repositories
+8. Install packages
 3. [Github](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_github.md)
     1. Create a Github account
     2. Copy SSH key from Jenkins server to Github
