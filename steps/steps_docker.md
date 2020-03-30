@@ -14,7 +14,7 @@
     2. Give it a Name and Description *Ex*: cicd_tomcat
     3. Set the Visibility to Private
     4. Click Create
-> ***NOTE**: Do **Steps 3 - 8** on Docker host*
+> ***NOTE**: Do **Steps 3 - 9** on Docker host*
 3. Connect Docker host to Docker Hub
     1. SSH to Docker host
     2. Become root, run the below command and enter the **Access Token** at the **Password** prompt
@@ -50,4 +50,10 @@ Ex: [root@docker ~]# docker commit -m "Custom Tomcat Container" -a "Hadriane" to
 ```
 [root@docker ~]# docker push <docker_hub_username>/<docker_hub_repo_name>:<tag>
 Ex: [root@docker ~]# docker push hadriane/cicd-tomcat:v1
+```
+9. Create a directory with appropriate permissions to store Java artifacts
+```
+[root@docker ~]# cd /tmp/
+[root@docker tmp]# mkdir java_artifacts
+[root@docker tmp]# chown ansibleadm:ansibleadm java_artifacts
 ```
