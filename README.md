@@ -38,21 +38,15 @@ The tools we would be using to build a CI/CD pipeline
 6. Copy SSH keys over to necessary servers
 7. Enable yum repositories
 8. Install packages
-3. [Github](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_github.md)
-    1. Create a Github account
-    2. Copy SSH key from Jenkins server to Github
-    2. Fork "helloworld" repo
-4. Docker Hub
-    1. Create a Access Tokens
-    2. Create a repository
-    3. Clone Docker image
-5. Install software and plugins
-    1. Jenkins host
-        1. Install Jenkins
-        2. Install Maven
-        3. Install plugins
-    2. Ansible host
-        1. Install Ansible
-    3. Docker host
-        1. Install Docker
+
+**[Github](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_github.md)**
+1. Create a Github account
+2. Copy SSH key from Jenkins server to Github
+3. Fork "helloworld" repo
+
+**[Docker Hub]()**
+1. Create a Access Tokens
+2. Create a repository
+3. Clone Docker image
+
  
