@@ -32,7 +32,7 @@ The tools we would be using to build a CI/CD pipeline
     1. Change server hostname and SSH timeout for all servers
     2. Create users
     3. Add uses to necessary groups
-    4. Grant sudo access to ansibleadm user on Ansible host
+    4. Grant sudo access to ansibleadm user
     5. Genetate SSH keys for users
     6. Copy SSH keys over to necessary servers
     7. Enable yum repositories
