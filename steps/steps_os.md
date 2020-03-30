@@ -191,7 +191,7 @@ User On Each Host
     ```
     [root@ansible ~]# pip install ansible
     ```
-    > ***NOTE**: Do steps **xii** step on Docker hosts*
+    > ***NOTE**: Do steps **xii - xiii** step on Docker hosts*
     12. Install Docker
     ```
     [root@docker ~]# yum install -y docker
