@@ -9,11 +9,11 @@
 2. Create an Ansible skeleton role
 ```
 [root@ansible ~]# cd /etc/ansible/
-[root@ansible ~]# ansible-galaxy init docker
+[root@ansible ansible]# ansible-galaxy init docker
 ```
-3. Move into Tomcat directory create a hosts directory
+3. Create a hosts directory
 ```
-[root@ansible tomcat]# mkdir -p docker/hosts
+[root@ansible ansible]# mkdir -p docker/hosts
 ```
 4. Create a hosts file in hosts directory with contents of this [file](https://github.com/hadriane/cicd_pipeline_java/blob/master/ansible_roles/hosts)
 > ***NOTE**: For **Step 5** change the **<private_ip_of_docker_server>** accordingly*
