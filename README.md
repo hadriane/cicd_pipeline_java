@@ -44,9 +44,14 @@ The tools we would be using to build a CI/CD pipeline
 2. Copy jenkinsadm SSH key from Jenkins server to Github
 3. Fork "helloworld" repo
 
-**[Docker Hub](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_dockerhub.md)**
+**[Docker](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/steps_dockerhub.md)**
 1. Create a Access Tokens
 2. Create a repository
-3. Clone Docker image
+3. Connect Docker host to Docker Hub
+4. Pull Tomcat 8.5 Docker image
+5. Run a Docker container using Tomcat 8.5 image
+6. Check if Docker container is running
+7. Create a Docker image out of the running container
+8. Push created Docker image to Docker Hub
 
  
