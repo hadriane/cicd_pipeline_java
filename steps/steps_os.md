@@ -106,7 +106,7 @@ User On Each Host
         [root@jenkins ~]#
         ``` 
 7. Enable yum repositories
-    > ***Note**: Do the below step only on Jenkins host
+    > ***Note**: Do the below step only on Jenkins host*
     1. Enable Jenkins repoistory
     ```
     [centos@jenkins ~]$ sudo su -
@@ -117,31 +117,26 @@ User On Each Host
     gpgcheck=1
     [root@jenkins ~]# sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
     ```
-    > ***Note**: Do the below step only on Ansible and Docker host
+    > ***Note**: Do the below step only on Ansible and Docker host*
     2. Enable EPEL repository
     ```
     [centos@ansible ~]$ sudo su -
     [root@ansible ~]# yum --enablerepo=extras install -y epel-release
     ```
 8. Install packages
-    > ***Note**: Do the below step on all hosts
-    1. install wget
-    ```
-    [root@jenkins ~]# yum install -y wget
-    ```
-    > ***Note**: Do steps only on Jenkins hosts
-    2. Install Java 1.8
+    > ***Note**: Do steps only on Jenkins hosts*
+    1. Install Java 1.8
     ```
     [root@jenkins ~]# yum install -y java-1.8*
-    ```
-    3. Find Java executable and take the last entry
+    ```    
+    2. Find Java executable and take the last entry
     ```
     [root@jenkins ~]# find /usr/lib/jvm/java-1.8* | head -n 3
     /usr/lib/jvm/java-1.8.0
     /usr/lib/jvm/java-1.8.0-openjdk
     /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
     ```
-    4. Set Java environment variable
+    3. Set environment variables
         1. Open /root/.bash_profile and modify it to like below then save the file
         ```
         # User specific environment and startup programs
@@ -159,3 +154,12 @@ User On Each Host
         [root@jenkins ~]# echo $M2_HOME
         /opt/maven
         ```
+    4. Install Jenkins
+    ```
+    [root@jenkins ~]# yum install -y jenkins
+    ```
+    > ***Note**: Do the below step on all hosts*
+    4. install wget
+    ```
+    [root@jenkins ~]# yum install -y wget
+    ```
