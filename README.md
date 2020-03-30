@@ -66,4 +66,4 @@ The tools we would be using to build a CI/CD pipeline
 **[Jenkins](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/jenkins.md)**
 1. Login to jenkins
 2. Configure Maven plugin
-***to be continued...***
+3. ***to be continued...***
