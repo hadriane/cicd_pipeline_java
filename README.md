@@ -40,8 +40,8 @@ The tools we would be using to build a CI/CD pipeline
 8. Install packages
 
 **[Github](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/github.md)**
-1. Get jenkinsadm SSH key from Jenkins server to Github
-2. Copy jenkinsadm SSH key from Jenkins server to Github
+1. Get jenkinsadm SSH key from Jenkins host
+2. Copy jenkinsadm SSH key from Jenkins host to Github
 3. Fork "helloworld" repo
 
 **[Docker](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/docker.md)**
