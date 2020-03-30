@@ -1,4 +1,4 @@
-### 1 - AWS
+### AWS
 
 
 Instance Types
