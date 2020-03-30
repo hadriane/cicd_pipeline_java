@@ -1,4 +1,4 @@
-### 3 - Github
+### Github
 
 1. Get jenkinsadm SSH key from Jenkins server to Github
     1. Copy the contents of the public key (except for the "jenkinsadm@jenkins" part at the end)
