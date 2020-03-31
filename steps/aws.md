@@ -3,14 +3,15 @@
 
 Instance Types
 
+- AMI ID : ami-0affd4508a5d2481b
+- AMI Type : CentOS 7 (x86_64) - with Updates HVM
+
 | Server  | Instance Type | Elastic IP | EBS Volume Size | Security Group Name / Tag | Open Port(s) |
 |---------|---------------|:----------:|:---------------:|:-------------------------:|:------------:|
 | Jenkins | t2.micro      |     Yes    |       8 GB      |       CICD - Jenkins      |    22,8080   |
 | Ansible | t2.micro      |     Yes    |       8 GB      |       CICD - Ansible      |      22      |
 | Docker  | t2.micro      |     Yes    |       8 GB      |       CICD - Docker       |    22,8080   |
 
-- AMI ID : ami-0affd4508a5d2481b
-- AMI Type : CentOS 7 (x86_64) - with Updates HVM
 
 1. Create Security Groups
     1. Login to your AWS console
