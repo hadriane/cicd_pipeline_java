@@ -66,4 +66,13 @@ The tools we would be using to build a CI/CD pipeline
 **[Jenkins](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/jenkins.md)**
 1. Login to jenkins
 2. Configure Maven plugin
-3. ***...to be continued...***
+3. Configuring Github plugin
+4. Configuring Github webhook trigger
+5. Configure Publish Over SSH plugin
+6. Copy SSH keys to /var/lib/jenkins/.ssh
+
+**[Pipeline](https://github.com/hadriane/cicd_pipeline_java/blob/master/steps/pipeline.md)**
+1. Start a new project
+2. Configure the project
+3. Run the build manually
+4. Trigger an automatic build
