@@ -45,7 +45,10 @@ Now that we have build and configured of CI/CD infrastructure, lets proceed to c
     2. Go to "https://github.com/<your_github_username>/helloworld/tree/master/webapp/src/main/webapp"
     3. Click on "index.jsp"
     4. Click on the **Pencil Icon** to edit the file
-    5. Add "<h2> End to end complete </h2>" at the bottom of the file
+    5. Add the following HTML code at the bottom of the file
+    ```
+    <h2> End to end complete </h2>
+    ```
     6. Click **Commit changes**
     7. Check the progress of the build in Jenkins
     8. Go to "http://<ip_address_of_docker_host>:8080/webapp" in a web browser and you will see the sentence "End to end complete" at the bottom
