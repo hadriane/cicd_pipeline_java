@@ -65,11 +65,11 @@
     6. Go to http://<public_ip_of_jenkins_server>:8080
     7. Click on **Manage Jenkins** >> **Configure System**
     8. Scroll down to the **Publish over SSH** section
-    > ***NOTE**: Repeat **Steps x -x** for Ansible host and Docker host 
+    > ***NOTE**: Repeat **Steps ix - xii** for Ansible host and Docker host*
     9. Click **Add**
     10. Give it a **Name** *Ex*: Ansible Host
     12. The **Hostname** shoud be the private IP address of the host
     13. The **Username** should be either "ansibleadm" or "dockeradm"
-    > ***NOTE**: Do **Step x** only for Docker host 
+    > ***NOTE**: Do **Step xiv** only for Docker host*
     14. The **Remote Directory** should be "/tmp/java_artifacts"
     15. Click **Save**
