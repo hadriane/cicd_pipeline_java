@@ -73,3 +73,17 @@
     > ***NOTE**: Do **Step xiv** only for Docker host*
     14. The **Remote Directory** should be "/tmp/java_artifacts"
     15. Click **Save**
+
+6. Copy SSH keys to /var/lib/jenkins/.ssh
+    1. Copy SSH keys to .ssh folder
+    ```
+    [root@jenkins ~]# cp /home/ansibleadm/.ssh/id_rsa /var/lib/jenkins/.ssh/ansibleadm.id_rsa
+    [root@jenkins ~]# cp /home/jenkinsadm/.ssh/id_rsa /var/lib/jenkins/.ssh/jenkinsadm.id_rsa
+    ```
+    2. Change ownership and permissions
+    ```
+    [root@jenkins ~]# chown jenkins:jenkins /var/lib/jenkins/.ssh/ansibleadm.id_rsa
+    [root@jenkins ~]# chown jenkins:jenkins /var/lib/jenkins/.ssh/jenkinsadm.id_rsa
+    [root@jenkins ~]# chmod 600 /var/lib/jenkins/.ssh/ansibleadm.id_rsa
+    [root@jenkins ~]# chmod 600 /var/lib/jenkins/.ssh/jenkinsadm.id_rsa
+    ```
