@@ -5,7 +5,6 @@
 
 The purpose of building a CI/CD pipeline is to automate steps in software delivery process
 
-
 ### Tools
 
 The tools we would be using to build a CI/CD pipeline
@@ -21,6 +20,8 @@ The tools we would be using to build a CI/CD pipeline
 ### Infrastructure Design
 ![Infrastructure Design](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/Infrastructure_Design.png)
 
+### Process
+![CICD Process](https://github.com/hadriane/cicd_pipeline_java/blob/master/images/CICD_Process.png)
 
 ### Overview of Steps
 
