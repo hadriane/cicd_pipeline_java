@@ -10,6 +10,7 @@ Instance Types
 | Docker  | t2.micro      |     Yes    |       8 GB      |       CICD - Docker       |    22,8080   |
 
 AMI ID : ami-0affd4508a5d2481b
+
 AMI Type : CentOS 7 (x86_64) - with Updates HVM
 
 1. Create Security Groups
